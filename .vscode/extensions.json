@@ -1,0 +1,22 @@
+{
+    "recommendations": [
+        "charliermarsh.ruff",
+        "christian-kohler.path-intellisense",
+        "davidanson.vscode-markdownlint",
+        "foxundermoon.shell-format",
+        "mechatroner.rainbow-csv",
+        "mikestead.dotenv",
+        "ms-azuretools.vscode-docker",
+        "ms-python.black-formatter",
+        "ms-python.mypy-type-checker",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.datawrangler",
+        "ms-toolsai.jupyter",
+        "njpwerner.autodocstring",
+        "streetsidesoftware.code-spell-checker",
+        "tamasfe.even-better-toml",
+        "timonwong.shellcheck",
+        "yzhang.markdown-all-in-one"
+    ]
+}
