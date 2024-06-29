@@ -1,8 +1,8 @@
 # ROADMAP
 
 - [ ] User Profile and Session Data Simulation - MongoDB
-  - [ ] Docker container
-  - [ ] Data ingestion
+  - [x] Docker container
+  - [x] Data ingestion
   - [ ] Data manipulation
 
 - [ ] Efficient Session Management and Caching - Redis

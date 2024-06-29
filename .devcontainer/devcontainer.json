@@ -31,6 +31,9 @@
         //  DEP: "onCreateCommand" changes .venv/ owner to vscode
         "type=volume,target=${containerWorkspaceFolder}/.venv/"
     ],
+    "runArgs": [
+        "--network=dataplaynet"
+    ],
     "remoteUser": "vscode",
     "containerEnv": {
         "LANG": "${localEnv:LANG}",

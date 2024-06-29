@@ -4,8 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+pymongo = "*"
 
 [dev-packages]
+build = "*"
+ipykernel = "*"
+pandas = "*"
+polars = "*"
 
 [requires]
 python_version = "3.12"

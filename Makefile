@@ -66,3 +66,17 @@ lint: ## Perform a static code analysis
 pipenv-dev-install: ## Create dev venv
 	@pipenv run pip install --upgrade pip
 	@pipenv install --dev --ignore-pipfile --deploy
+
+####### COMMANDS - MAIN #######################################################################
+
+d-create-network: ## Create internal network
+	@docker network create dataplaynet || true
+
+dcomp-up: d-create-network ## Start all services
+	@docker-compose up -d
+
+dcomp-up-mongo: d-create-network ## Start mongo service
+	@docker-compose --profile mongo up -d
+
+dcomp-down: ## Stop all services
+	@docker-compose down
