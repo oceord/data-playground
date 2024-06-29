@@ -13,6 +13,9 @@
     "notebook.output.wordWrap": true,
     /* Extensions **/
     "markdownlint.run": "onSave",
+    "markdownlint.config": {
+        "MD029": false
+    },
     "material-icon-theme.folders.associations": {
         "data_playground": "src"
     },
@@ -32,8 +35,11 @@
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
     "cSpell.words": [
+        "concat",
+        "cond",
         "dataplaynet",
         "discoverability",
+        "phind",
         "pymongo",
         "Qdrant"
     ]
