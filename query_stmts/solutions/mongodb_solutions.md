@@ -230,3 +230,45 @@ db.user_events.aggregate([
   }}
 ])
 ```
+
+26. **Create a Single Field Index**: Create an ascending index on the product_id field.
+
+```shell
+db.user_events.createIndex({ product_id: 1 })
+```
+
+27. **Create a Compound Index**: Create compound index on both product_id and event_type.
+
+```shell
+db.user_events.createIndex({ product_id: 1, event_type: 1 })
+```
+
+28. **Create a Unique Index**: Ensure that all values are unique across the collection.
+
+```shell
+db.user_events.createIndex({ event_id: 1 }, { unique: true })
+```
+
+29. **Create a Text Index**: Useful for full-text searches on the category_code field.
+
+```shell
+db.user_events.createIndex({ category_code: "text" })
+```
+
+30. **Create a Geospatial Index**: For queries involving geographical proximity or boundary checks.
+
+```shell
+db.user_events.createIndex({ location: "2dsphere" })
+```
+
+31. **Create a Hashed Index**: Create a hashed index on event_time for efficient equality matches.
+
+```shell
+db.user_events.createIndex({ event_time: "hashed" })
+```
+
+32. **Create a TTL Index**: This index marks documents to be deleted after a certain period from event_time.
+
+```shell
+db.user_events.createIndex({ event_time: 1 }, { expireAfterSeconds: 3600 })
+```

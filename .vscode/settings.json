@@ -39,6 +39,8 @@
         "cond",
         "dataplaynet",
         "discoverability",
+        "dsphere",
+        "Geospatial",
         "phind",
         "pymongo",
         "Qdrant"

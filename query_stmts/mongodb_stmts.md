@@ -28,3 +28,10 @@
 - [ ] **Array Intersection**: Find common elements in two arrays.
 - [ ] **Array Union**: Combine two arrays.
 - [ ] **Array Zip**: Combine two arrays element-wise.
+- [ ] **Create a Single Field Index**: Create an ascending index on the product_id field.
+- [ ] **Create a Compound Index**: Create compound index on both product_id and event_type.
+- [ ] **Create a Unique Index**: Ensure that all values are unique across the collection.
+- [ ] **Create a Text Index**: Useful for full-text searches on the category_code field.
+- [ ] **Create a Geospatial Index**: For queries involving geographical proximity or boundary checks.
+- [ ] **Create a Hashed Index**: Create a hashed index on event_time for efficient equality matches.
+- [ ] **Create a TTL Index**: This index marks documents to be deleted after a certain period from event_time.
