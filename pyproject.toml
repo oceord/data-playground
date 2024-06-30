@@ -11,7 +11,7 @@ warn_unreachable = true
 allow_redefinition = true
 local_partial_types = true
 strict_equality = true
-install_types = true
+# install_types = true
 
 [tool.ruff]
 select = ["ALL"]
@@ -29,6 +29,14 @@ ignore = [
     "INP",
     # Allow print statements
     "T20",
+    # Allow magic values
+    "PLR2004",
+    # Allow commented code
+    "ERA001",
+    # Allow no tzinfo in dates
+    "DTZ001",
+    # Allow hardcoded passwords
+    "S105",
 ]
 
 [tool.ruff.flake8-annotations]

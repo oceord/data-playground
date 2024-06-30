@@ -7,7 +7,7 @@ MONGO_SERVICE_DOMAIN = "mongo"
 MONGO_SERVICE_PORT = 27017
 
 MONGO_USER = "mongo"
-MONGO_PASS = "mongo"  # noqa: S105
+MONGO_PASS = "mongo"
 
 MONGO_DB = "data_playground"
 MONGO_COLLECTION = "user_events"
