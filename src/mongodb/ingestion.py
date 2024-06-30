@@ -34,7 +34,12 @@ def stream_csv_to_mongo(csv_file_path, db_name, coll_name):
     batch_list = batch_reader.next_batches(BATCH_ITER_NUM)
     while batch_list is not None:
         for batch in batch_list:
-            collection.insert_many(batch.to_dicts())
+            converted_batch = batch.with_columns(
+                batch["event_time"]
+                .str.to_datetime("%Y-%m-%d %H:%M:%S %Z")
+                .alias("event_time"),
+            )
+            collection.insert_many(converted_batch.to_dicts())
         batch_list = batch_reader.next_batches(BATCH_ITER_NUM)
 
 
@@ -48,8 +53,6 @@ if __name__ == "__main__":
         for item in input_csv_dir.iterdir()
         if item.is_file() and item.name.endswith(".csv")
     ]
-    mongo_collection = (
-        sys.argv[2] if len(sys.argv) > 2 else MONGO_COLLECTION  # noqa: PLR2004
-    )
+    mongo_collection = sys.argv[2] if len(sys.argv) > 2 else MONGO_COLLECTION
     for file in csv_files:
         stream_csv_to_mongo(file, MONGO_DB, mongo_collection)
