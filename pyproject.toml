@@ -37,6 +37,8 @@ ignore = [
     "DTZ001",
     # Allow hardcoded passwords
     "S105",
+    # Allow lambda variables
+    "E731",
 ]
 
 [tool.ruff.flake8-annotations]

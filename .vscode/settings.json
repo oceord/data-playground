@@ -35,6 +35,7 @@
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
     "cSpell.words": [
+        "bson",
         "concat",
         "cond",
         "dataplaynet",

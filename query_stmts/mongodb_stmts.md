@@ -11,27 +11,27 @@
 - [x] **Limit Results**: Limit the number of returned documents.
 - [x] **Skip Results**: Skip a certain number of documents.
 - [x] **Projection**: Select specific fields to return.
-- [ ] **Update Document**: Update a document based on a condition.
-- [ ] **Delete Document**: Delete a document based on a condition.
+- [x] **Update Document**: Update a document based on a condition.
+- [x] **Delete Document**: Delete a document based on a condition.
 - [x] **Group By Category**: Group events by category_id and count occurrences.
 - [x] **Average Price**: Calculate the average price of products.
 - [x] **Max and Min Values**: Find the maximum and minimum values of price.
 - [x] **Filter and Project**: Filter events by event_type and project specific fields.
-- [ ] **Unwind Array**: Unwind an array field.
-- [ ] **Lookup**: Perform a join-like operation between collections.
-- [ ] **Conditional Aggregation**: Use `$cond` for conditional logic.
-- [ ] **Array Concatenation**: Concatenate arrays using `$concatArrays`.
-- [ ] **Date Truncation**: Truncate dates to the day.
-- [ ] **String Manipulation**: Convert string to lowercase.
-- [ ] **Array Length**: Calculate the length of an array.
-- [ ] **Set Difference**: Find elements in one array not present in another.
-- [ ] **Array Intersection**: Find common elements in two arrays.
-- [ ] **Array Union**: Combine two arrays.
-- [ ] **Array Zip**: Combine two arrays element-wise.
-- [ ] **Create a Single Field Index**: Create an ascending index on the product_id field.
-- [ ] **Create a Compound Index**: Create compound index on both product_id and event_type.
-- [ ] **Create a Unique Index**: Ensure that all values are unique across the collection.
-- [ ] **Create a Text Index**: Useful for full-text searches on the category_code field.
-- [ ] **Create a Geospatial Index**: For queries involving geographical proximity or boundary checks.
-- [ ] **Create a Hashed Index**: Create a hashed index on event_time for efficient equality matches.
-- [ ] **Create a TTL Index**: This index marks documents to be deleted after a certain period from event_time.
+- [x] **Unwind Array**: Unwind an array field.
+- [x] **Lookup**: Perform a join-like operation between collections.
+- [x] **Conditional Aggregation**: Use `$cond` for conditional logic.
+- [x] **Array Concatenation**: Concatenate arrays using `$concatArrays`.
+- [x] **Date Truncation**: Truncate dates to the day.
+- [x] **String Manipulation**: Convert string to lowercase.
+- [x] **Array Length**: Calculate the length of an array.
+- [x] **Set Difference**: Find elements in one array not present in another.
+- [x] **Array Intersection**: Find common elements in two arrays.
+- [x] **Array Union**: Combine two arrays.
+- [x] **Array Zip**: Combine two arrays element-wise.
+- [x] **Create a Single Field Index**: Create an ascending index on the product_id field.
+- [x] **Create a Compound Index**: Create compound index on both product_id and event_type.
+- [x] **Create a Unique Index**: Ensure that all values are unique across the collection.
+- [x] **Create a Text Index**: Useful for full-text searches on the category_code field.
+- [x] **Create a Geospatial Index**: For queries involving geographical proximity or boundary checks.
+- [x] **Create a Hashed Index**: Create a hashed index on event_time for efficient equality matches.
+- [x] **Create a TTL Index**: This index marks documents to be deleted after a certain period from event_time.
