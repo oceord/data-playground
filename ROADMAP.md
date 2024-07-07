@@ -6,7 +6,7 @@
   - [x] Data manipulation
 
 - [ ] Efficient Session Management and Caching - Redis
-  - [ ] Docker container
+  - [x] Docker container
   - [ ] Data ingestion
   - [ ] Data manipulation
 

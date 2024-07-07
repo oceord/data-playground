@@ -78,5 +78,8 @@ dcomp-up: d-create-network ## Start all services
 dcomp-up-mongo: d-create-network ## Start mongo service
 	@docker-compose --profile mongo up -d
 
+dcomp-up-redis: d-create-network ## Start redis service
+	@docker-compose --profile redis up -d
+
 dcomp-down: ## Stop all services
 	@docker-compose down

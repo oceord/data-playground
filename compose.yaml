@@ -2,13 +2,14 @@ version: "3.1"
 
 services:
   mongo:
+    profiles: [ "mongo", "user_data" ]
     image: mongo
     container_name: mongo
     restart: always
     volumes:
       - mongodbdata:/data/db
     ports:
-      - "27017:27017"
+      - 27017:27017
     networks:
       - dataplaynet
     environment:
@@ -28,7 +29,29 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: mongo
       ME_CONFIG_MONGODB_URL: mongodb://mongo:mongo@mongo:27017/
       ME_CONFIG_BASICAUTH:
-
+  redis:
+    profiles: [ "redis", "cache" ]
+    image: redis
+    container_name: redis
+    restart: always
+    ports:
+      - 6379:6379
+    networks:
+      - dataplaynet
+    command: redis-server --save 60 1 --loglevel warning
+    volumes:
+      - redisdata:/data
+  redisinsight:
+    profiles: [ "redis", "cache" ]
+    image: redis/redisinsight
+    container_name: redisinsight
+    restart: always
+    ports:
+      - 5540:5540
+    networks:
+      - dataplaynet
+    volumes:
+      - redisinsightdata:/data
 
 networks:
   dataplaynet:
@@ -36,3 +59,5 @@ networks:
 
 volumes:
   mongodbdata:
+  redisdata:
+  redisinsightdata:
