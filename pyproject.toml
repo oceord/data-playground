@@ -39,6 +39,12 @@ ignore = [
     "S105",
     # Allow lambda variables
     "E731",
+    # Allow pseudo-random generators
+    "S311",
+    # Allow raising exterior exceptions
+    "TRY301",
+    # Allow raising any exception
+    "TRY002",
 ]
 
 [tool.ruff.flake8-annotations]

@@ -5,10 +5,10 @@
   - [x] Data ingestion
   - [x] Data manipulation
 
-- [ ] Efficient Session Management and Caching - Redis
+- [x] Efficient Session Management and Caching - Redis
   - [x] Docker container
-  - [ ] Data ingestion
-  - [ ] Data manipulation
+  - [x] Data ingestion
+  - [x] Data manipulation
 
 - [ ] Scalable Transaction Order Processing - Cassandra
   - [ ] Docker container

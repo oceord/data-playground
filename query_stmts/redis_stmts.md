@@ -5,80 +5,80 @@
 
 ## Basic Operations
 
-- [ ] SET key value: Sets a key to hold a string value.
-- [ ] GET key: Retrieves the value of a key.
-- [ ] DEL key: Deletes a key.
-- [ ] EXISTS key: Checks if a key exists.
-- [ ] TTL key: Returns the remaining time to live of a key that has a timeout.
-- [ ] EXPIRE key seconds: Sets a key to expire after a given number of seconds.
-- [ ] INCR key: Increments the integer value of a key by one.
-- [ ] DECR key: Decreases the integer value of a key by one.
+- [x] SET key value: Sets a key to hold a string value.
+- [x] GET key: Retrieves the value of a key.
+- [x] DEL key: Deletes a key.
+- [x] EXISTS key: Checks if a key exists.
+- [x] TTL key: Returns the remaining time to live of a key that has a timeout.
+- [x] EXPIRE key seconds: Sets a key to expire after a given number of seconds.
+- [x] INCR key: Increments the integer value of a key by one.
+- [x] DECR key: Decreases the integer value of a key by one.
 
 ## Lists
 
-- [ ] LPUSH key value: Pushes a value onto the left of a list.
-- [ ] RPUSH key value: Pushes a value onto the right of a list.
-- [ ] LPOP key: Removes and returns the leftmost element of a list.
-- [ ] RPOP key: Removes and returns the rightmost element of a list.
-- [ ] LRANGE key start stop: Returns a range of elements from a list.
-- [ ] LINDEX key index: Gets the value at the specified index in a list.
+- [x] LPUSH key value: Pushes a value onto the left of a list.
+- [x] RPUSH key value: Pushes a value onto the right of a list.
+- [x] LPOP key: Removes and returns the leftmost element of a list.
+- [x] RPOP key: Removes and returns the rightmost element of a list.
+- [x] LRANGE key start stop: Returns a range of elements from a list.
+- [x] LINDEX key index: Gets the value at the specified index in a list.
 
 ## Sets
 
-- [ ] SADD key member: Adds one or more members to a set.
-- [ ] SMEMBERS key: Gets all the members in a set.
-- [ ] SCARD key: Counts the number of members in a set.
-- [ ] SISMEMBER key member: Determines if a member is a part of a set.
-- [ ] SDIFF key1 key2: Subtracts the second set from the first.
-- [ ] SINTER key1 key2: Intersects two sets.
+- [x] SADD key member: Adds one or more members to a set.
+- [x] SMEMBERS key: Gets all the members in a set.
+- [x] SCARD key: Counts the number of members in a set.
+- [x] SISMEMBER key member: Determines if a member is a part of a set.
+- [x] SDIFF key1 key2: Subtracts the second set from the first.
+- [x] SINTER key1 key2: Intersects two sets.
 
 ## Sorted Sets
 
-- [ ] ZADD key score member: Adds a member to a sorted set with a specified score.
-- [ ] ZRANGE key start stop [WITHSCORES]: Returns a range of members in a sorted set.
-- [ ] ZCARD key: Counts the number of members in a sorted set.
-- [ ] ZCOUNT key min max: Counts the number of members in a sorted set between a minimum and maximum score.
-- [ ] ZREM key member: Removes a member from a sorted set.
+- [x] ZADD key score member: Adds a member to a sorted set with a specified score.
+- [x] ZRANGE key start stop [WITHSCORES]: Returns a range of members in a sorted set.
+- [x] ZCARD key: Counts the number of members in a sorted set.
+- [x] ZCOUNT key min max: Counts the number of members in a sorted set between a minimum and maximum score.
+- [x] ZREM key member: Removes a member from a sorted set.
 
 ## Hashes
 
-- [ ] HSET key field value: Sets the value of a hash field.
-- [ ] HGET key field: Gets the value of a hash field.
-- [ ] HDEL key field: Deletes a field from a hash.
-- [ ] HGETALL key: Gets all fields and values of a hash.
-- [ ] HKEYS key: Gets all field names of a hash.
+- [x] HSET key field value: Sets the value of a hash field.
+- [x] HGET key field: Gets the value of a hash field.
+- [x] HDEL key field: Deletes a field from a hash.
+- [x] HGETALL key: Gets all fields and values of a hash.
+- [x] HKEYS key: Gets all field names of a hash.
 
 ## Pub/Sub
 
-- [ ] PUBLISH channel message: Publishes a message to a channel.
-- [ ] SUBSCRIBE channel: Subscribes to a channel.
-- [ ] UNSUBSCRIBE channel: Unsubscribes from a channel.
+- [x] PUBLISH channel message: Publishes a message to a channel.
+- [x] SUBSCRIBE channel: Subscribes to a channel.
+- [x] UNSUBSCRIBE channel: Unsubscribes from a channel.
 
 ## Transactions
 
-- [ ] MULTI: Starts a new transaction.
-- [ ] EXEC: Executes all queued commands in a transaction.
-- [ ] DISCARD: Discards all queued commands in a transaction.
+- [x] MULTI: Starts a new transaction.
+- [x] EXEC: Executes all queued commands in a transaction.
+- [x] DISCARD: Discards all queued commands in a transaction.
 
 ## Persistence and Replication
 
-- [ ] SAVE: Synchronously saves the dataset to disk.
-- [ ] BGSAVE: Asynchronously saves the dataset to disk.
-- [ ] BGREWRITEAOF: Asynchronously appends data to the append-only file.
-- [ ] CONFIG SET parameter value: Changes the configuration of the Redis server.
+- [x] SAVE: Synchronously saves the dataset to disk.
+- [x] BGSAVE: Asynchronously saves the dataset to disk.
+- [x] BGREWRITEAOF: Asynchronously appends data to the append-only file.
+- [x] CONFIG SET parameter value: Changes the configuration of the Redis server.
 
 ## Monitoring and Debugging
 
-- [ ] INFO: Provides information and statistics about the server.
-- [ ] MONITOR: Listens for all requests received by the server in real-time.
-- [ ] DEBUG OBJECT key: Gets debugging information about a key.
-- [ ] CLIENT LIST: Lists all connected clients.
+- [x] INFO: Provides information and statistics about the server.
+- [x] MONITOR: Listens for all requests received by the server in real-time.
+- [x] DEBUG OBJECT key: Gets debugging information about a key.
+- [x] CLIENT LIST: Lists all connected clients.
 
 ## Miscellaneous
 
-- [ ] AUTH password: Authenticates to the server with a password.
-- [ ] PING: Checks if the server is running.
-- [ ] FLUSHALL: Removes all keys from all databases.
-- [ ] FLUSHDB: Removes all keys from the current database.
-- [ ] DBSIZE: Returns the number of keys in the currently selected database.
-- [ ] SELECT index: Selects the database for the current connection.
+- [x] AUTH password: Authenticates to the server with a password.
+- [x] PING: Checks if the server is running.
+- [x] FLUSHALL: Removes all keys from all databases.
+- [x] FLUSHDB: Removes all keys from the current database.
+- [x] DBSIZE: Returns the number of keys in the currently selected database.
+- [x] SELECT index: Selects the database for the current connection.

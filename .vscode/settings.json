@@ -68,6 +68,7 @@
         "SDIFF",
         "SISMEMBER",
         "SMEMBERS",
+        "withscores",
         "ZADD",
         "ZCARD",
         "ZCOUNT",
