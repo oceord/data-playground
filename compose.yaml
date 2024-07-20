@@ -1,6 +1,7 @@
 version: "3.1"
 
 services:
+
   mongo:
     profiles: [ "mongo", "user_data" ]
     image: mongo
@@ -29,6 +30,8 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: mongo
       ME_CONFIG_MONGODB_URL: mongodb://mongo:mongo@mongo:27017/
       ME_CONFIG_BASICAUTH:
+
+
   redis:
     profiles: [ "redis", "cache" ]
     image: redis
@@ -52,6 +55,36 @@ services:
       - dataplaynet
     volumes:
       - redisinsightdata:/data
+
+  cassandra1:
+    profiles: [ "cassandra", "distributed" ]
+    image: cassandra
+    container_name: cassandra1
+    ports:
+      - 9042:9042
+    environment:
+      - CASSANDRA_USER=admin
+      - CASSANDRA_PASSWORD=admin
+      - CASSANDRA_SEEDS=cassandra1,cassandra2
+    networks:
+      - dataplaynet
+    volumes:
+      - ./conf/cassandra1.yaml:/etc/cassandra/cassandra.yaml
+
+  cassandra2:
+    profiles: [ "cassandra", "distributed" ]
+    image: cassandra
+    container_name: cassandra2
+    ports:
+      - 9043:9042
+    environment:
+      - CASSANDRA_USER=admin
+      - CASSANDRA_PASSWORD=admin
+      - CASSANDRA_SEEDS=cassandra1,cassandra2
+    networks:
+      - dataplaynet
+    volumes:
+      - ./conf/cassandra2.yaml:/etc/cassandra/cassandra.yaml
 
 networks:
   dataplaynet:

@@ -5,65 +5,65 @@
 
 ## Basic CRUD Operations
 
-- [ ] Insert Data
-- [ ] Select All Data
-- [ ] Select Specific Columns
-- [ ] Update Price
-- [ ] Delete Record
+- [x] Insert Data
+- [x] Select All Data
+- [x] Select Specific Columns
+- [x] Update Price
+- [x] Delete Record
 
 ## Partitioning and Clustering Keys
 
-- [ ] Query by Category ID
-- [ ] Range Query by Event Time
-- [ ] Order by Product ID
-- [ ] Limit Results
-- [ ] Skip Results
+- [x] Query by Category ID
+- [x] Range Query by Event Time
+- [x] Order by Product ID
+- [x] Limit Results
+- [x] ~~Skip Results~~ (NOTE: phind hallucination; Cassandra does not support skipping natively)
 
 ## Batch Operations
 
-- [ ] Batch Insert
-- [ ] Batch Delete
+- [x] Batch Insert
+- [x] Batch Delete
 
 ## Secondary Indexes and Materialized Views
 
-- [ ] Create Index on Brand
-- [ ] Query Using Index
-- [ ] Drop Index
-- [ ] Create Materialized View
-- [ ] Query Materialized View
-- [ ] Drop Materialized View
+- [x] Create Index on Brand
+- [x] Query Using Index
+- [x] Drop Index
+- [x] Create Materialized View
+- [x] Query Materialized View
+- [x] Drop Materialized View
 
 ## High Availability and Scalability
 
-- [ ] Set Replication Factor
-- [ ] Add Node to Cluster
-- [ ] Distribute Data After Adding Node
-- [ ] Check Data Distribution
-- [ ] Monitor System Metrics
-- [ ] List Tables
-- [ ] Describe Table
-- [ ] Compact Table
-- [ ] Repair Table
-- [ ] Backup Table
-- [ ] Restore Table
-- [ ] Drop Table
-- [ ] Create Table
-- [ ] Alter Table
-- [ ] Rename Table
-- [ ] Drop Column
-- [ ] Modify Primary Key
-- [ ] Create Composite Primary Key
-- [ ] Create Super Column Family
-- [ ] Insert into Super Column
-- [ ] Query Super Column
-- [ ] Delete Super Column
-- [ ] Drop Super Column
-- [ ] Create User Defined Type
-- [ ] Insert UDT
-- [ ] Query UDT
-- [ ] Update UDT
-- [ ] Delete UDT
-- [ ] Drop UDT
-- [ ] Create Collection
-- [ ] Insert into Collection
-- [ ] Query Collection
+- [x] Set Replication Factor
+- [x] Add Node to Cluster
+- [x] Distribute Data After Adding Node
+- [x] Check Data Distribution
+- [x] Monitor System Metrics
+- [x] List Tables
+- [x] Describe Table
+- [x] ~~Compact Table~~ (NOTE: disregarded as it it not the focus of this project)
+- [x] Repair Table
+- [x] Backup Table
+- [x] Restore Table
+- [x] Drop Table
+- [x] Create Table
+- [x] Alter Table
+- [x] ~~Rename Table~~ (NOTE: phind hallucination; Cassandra does not support renaming tables directly)
+- [x] Drop Column
+- [x] ~~Modify Primary Key~~ (NOTE: phind hallucination; primary keys cannot be modified in Cassandra)
+- [x] Create Composite Primary Key
+- [x] ~~Create Super Column Family~~ (NOTE: phind hallucination; primary keys cannot be modified in Cassandra)
+- [x] ~~Insert into Super Column~~ (NOTE: super columns seem to have lost traction)
+- [x] ~~Query Super Column~~ (NOTE: super columns seem to have lost traction)
+- [x] ~~Delete Super Column~~ (NOTE: super columns seem to have lost traction)
+- [x] ~~Drop Super Column~~ (NOTE: super columns seem to have lost traction)
+- [x] Create User Defined Type
+- [x] Insert UDT
+- [x] Query UDT
+- [x] Update UDT
+- [x] ~~Delete UDT~~ (NOTE: not supported directly, requires pre-computation)
+- [x] Drop UDT
+- [x] Create Collection
+- [x] Insert into Collection
+- [x] Query Collection

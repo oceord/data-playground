@@ -75,6 +75,9 @@ d-create-network: ## Create internal network
 dcomp-up: d-create-network ## Start all services
 	@docker-compose up -d
 
+dcomp-up-cassandra: d-create-network ## Start cassandra service
+	@docker-compose --profile cassandra up -d
+
 dcomp-up-mongo: d-create-network ## Start mongo service
 	@docker-compose --profile mongo up -d
 

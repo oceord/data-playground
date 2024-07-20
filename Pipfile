@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 pymongo = "*"
 redis = "*"
+cassandra-driver = "*"
 
 [dev-packages]
 build = "*"

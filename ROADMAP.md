@@ -10,10 +10,10 @@
   - [x] Data ingestion
   - [x] Data manipulation
 
-- [ ] Scalable Transaction Order Processing - Cassandra
-  - [ ] Docker container
-  - [ ] Data ingestion
-  - [ ] Data manipulation
+- [x] Scalable Transaction Order Processing - Cassandra
+  - [x] Docker container
+  - [x] Data ingestion
+  - [x] Data manipulation
 
 - [ ] Advanced Relationship Mapping - Neo4j
   - [ ] Docker container

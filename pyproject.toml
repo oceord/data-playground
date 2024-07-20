@@ -45,6 +45,8 @@ ignore = [
     "TRY301",
     # Allow raising any exception
     "TRY002",
+    # Allow possible SQL injection
+    "S608",
 ]
 
 [tool.ruff.flake8-annotations]
