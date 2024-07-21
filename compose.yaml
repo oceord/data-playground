@@ -86,6 +86,21 @@ services:
     volumes:
       - ./conf/cassandra2.yaml:/etc/cassandra/cassandra.yaml
 
+  neo4j:
+    profiles: [ "neo4j", "rel_map" ]
+    image: neo4j
+    container_name: neo4j
+    restart: always
+    ports:
+      - 7474:7474
+      - 7687:7687
+    networks:
+      - dataplaynet
+    environment:
+      - NEO4J_AUTH=none
+    volumes:
+      - neo4jdata:/data
+
 networks:
   dataplaynet:
     external: true
@@ -94,3 +109,4 @@ volumes:
   mongodbdata:
   redisdata:
   redisinsightdata:
+  neo4jdata:

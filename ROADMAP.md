@@ -16,7 +16,7 @@
   - [x] Data manipulation
 
 - [ ] Advanced Relationship Mapping - Neo4j
-  - [ ] Docker container
+  - [x] Docker container
   - [ ] Data ingestion
   - [ ] Data manipulation
 
