@@ -57,10 +57,10 @@ def ingest_product(driver, row_dict):
 
 def run_query(driver, query, /, **kwargs):
     with driver.session() as session:
-        session.execute_write(create_node_tx, query, kwargs)
+        session.execute_write(tx_function, query, kwargs)
 
 
-def create_node_tx(tx, query, kwargs):
+def tx_function(tx, query, kwargs):
     tx.run(query, **kwargs)
 
 
