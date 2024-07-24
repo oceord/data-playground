@@ -25,7 +25,9 @@
         "--config-file=pyproject.toml"
     ],
     "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
-    "ruff.lint.args": [],
+    "ruff.lint.args": [
+        "--config=/workspaces/data-playground/pyproject.toml"
+    ],
     /* Editor settings for Python **/
     "[python]": {
         "editor.codeActionsOnSave": {
@@ -78,6 +80,7 @@
         "SMEMBERS",
         "sstableloader",
         "sstables",
+        "subcat",
         "SUPERCOLUMN",
         "UNLOGGED",
         "withscores",

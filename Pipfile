@@ -7,6 +7,7 @@ name = "pypi"
 pymongo = "*"
 redis = "*"
 cassandra-driver = "*"
+neo4j = "*"
 
 [dev-packages]
 build = "*"
