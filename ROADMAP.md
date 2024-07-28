@@ -17,7 +17,7 @@
 
 - [ ] Advanced Relationship Mapping - Neo4j
   - [x] Docker container
-  - [ ] Data ingestion
+  - [x] Data ingestion
   - [ ] Data manipulation
 
 - [ ] Dynamic Product Search Implementation - Elasticsearch

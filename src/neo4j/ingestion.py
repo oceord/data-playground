@@ -17,54 +17,118 @@ def ingest_data(file):
 
 
 def clear(driver):
-    query = """
-        MATCH (n)
-        OPTIONAL MATCH (n)-[r]-()
-        WITH n, collect(r) AS rels
-        WHERE size(rels) <= 50000
-        DETACH DELETE n, rels
-    """
+    query = "MATCH (n) DETACH DELETE n"
     run_query(driver, query)
 
 
 def ingest_category(driver, row_dict):
-    raise NotImplementedError
-    create_cat_query = "CREATE (n:NodeExample {name: $name, uuid: randomUUID()})"
-    cat_name = "CAT_NAME"
+    create_cat_query = "MERGE (c:Category {name: $name})"
+    cat_name = row_dict.get("category")
     run_query(driver, create_cat_query, name=cat_name)
-    create_subcategory_query = (
-        "CREATE (n:NodeExample {name: $name, uuid: randomUUID()})"
-    )
-    subcat_name = "SUBCAT_NAME"
+    create_subcategory_query = "MERGE (sc:SubCategory {name: $name})"
+    subcat_name = row_dict.get("sub_category")
     run_query(driver, create_subcategory_query, name=subcat_name)
+    relate_cat_to_sub_cat_query = (
+        "MATCH "
+        "(c:Category {name: $node_a_name}), "
+        "(sc:SubCategory {name: $node_b_name}) "
+        "MERGE (sc)-[:SUBCATEGORY_OF]->(c)"
+    )
+    run_query(
+        driver,
+        relate_cat_to_sub_cat_query,
+        node_a_name=cat_name,
+        node_b_name=subcat_name,
+    )
 
 
 def ingest_seller(driver, row_dict):
-    raise NotImplementedError
-    create_seller_query = "CREATE (n:NodeExample {name: $name, uuid: randomUUID()})"
-    seller_name = "SELLER_NAME"
+    create_seller_query = "MERGE (s:Seller {name: $name})"
+    seller_name = row_dict.get("seller")
     run_query(driver, create_seller_query, name=seller_name)
 
 
 def ingest_product(driver, row_dict):
-    raise NotImplementedError
-    create_prod_query = "CREATE (n:NodeExample {name: $name, uuid: randomUUID()})"
-    prod_name = "PRODUCT_NAME"
-    run_query(driver, create_prod_query, name=prod_name)
-    create_relation_query = (
-        "MATCH "
-        "(a:NodeExample {name: $node_a_name}), "
-        "(b:NodeExample {name: $node_b_name}) "
-        "MERGE (a)-[:related_to]->(b)"
-    )
-    node_a_name = "PRODUCT_NAME"
-    node_b_name = "CAT_NAME"
+    create_prod_query = """
+        MERGE (newProduct:Product {pid: $prod_pid})
+        ON CREATE SET
+            newProduct.name = $name,
+            newProduct.desc = $prod_desc,
+            newProduct.brand = $prod_brand,
+            newProduct.price = $prod_price,
+            newProduct.avg_rating = $prod_rating
+    """
+    prod_name = row_dict.get("title")
+    prod_desc = row_dict.get("description")
+    prod_pid = row_dict.get("pid")
+    prod_brand = row_dict.get("brand")
+    prod_price = cast(row_dict.get("actual_price").replace(",", ""), float)
+    prod_rating = cast(row_dict.get("average_rating").replace(",", ""), float)
     run_query(
         driver,
-        create_relation_query,
-        node_a_name=node_a_name,
-        node_b_name=node_b_name,
+        create_prod_query,
+        prod_pid=prod_pid,
+        name=prod_name,
+        prod_desc=prod_desc,
+        prod_brand=prod_brand,
+        prod_price=prod_price,
+        prod_rating=prod_rating,
     )
+    # create_cat_rel_query = """
+    #     MATCH
+    #     (p:Product {name: $product_name}),
+    #     (c:Category {name: $category_name})
+    #     MERGE (p)-[:HAS_CATEGORY]->(c)
+    # """
+    # category_name = row_dict.get("category")
+    # run_query(
+    #     driver,
+    #     create_cat_rel_query,
+    #     product_name=prod_name,
+    #     category_name=category_name,
+    # )
+    create_subcat_rel_query = """
+        MATCH
+        (p:Product {pid: $prod_pid}),
+        (sc:SubCategory {name: $category_name})
+        MERGE (p)-[:HAS_CATEGORY]->(sc)
+    """
+    subcategory_name = row_dict.get("sub_category")
+    run_query(
+        driver,
+        create_subcat_rel_query,
+        prod_pid=prod_pid,
+        category_name=subcategory_name,
+    )
+    create_seller_rel_query = """
+        MATCH
+        (p:Product {pid: $prod_pid}),
+        (s:Seller {name: $seller})
+        MERGE (s)-[r:SELLS]->(p)
+        ON CREATE SET
+            r.selling_price = $selling_price,
+            r.out_of_stock = $out_of_stock,
+            r.discount = $discount
+    """
+    seller_name = row_dict.get("seller")
+    selling_price = cast(row_dict.get("selling_price").replace(",", ""), float)
+    out_of_stock = row_dict.get("out_of_stock") == "TRUE"
+    discount_str = row_dict.get("discount")
+    discount_split = discount_str.split("%")
+    discount = cast(discount_split[0] if discount_split else 0, float)
+    run_query(
+        driver,
+        create_seller_rel_query,
+        seller=seller_name,
+        prod_pid=prod_pid,
+        selling_price=selling_price,
+        out_of_stock=out_of_stock,
+        discount=discount,
+    )
+
+
+def cast(field_str, typ):
+    return typ(field_str) if field_str else None
 
 
 def run_query(driver, query, /, **kwargs):
