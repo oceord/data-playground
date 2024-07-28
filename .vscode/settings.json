@@ -69,6 +69,7 @@
         "phind",
         "pymongo",
         "Qdrant",
+        "rels",
         "resultset",
         "RPOP",
         "RPUSH",

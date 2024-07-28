@@ -7,12 +7,24 @@ URI = "neo4j://neo4j"
 
 def ingest_data(file):
     driver = GraphDatabase.driver(URI)
+    clear(driver)
     with file.open(mode="r") as csv_file:
         reader = csv.DictReader(csv_file)
         for row_dict in reader:
             ingest_category(driver, row_dict)
             ingest_seller(driver, row_dict)
             ingest_product(driver, row_dict)
+
+
+def clear(driver):
+    query = """
+        MATCH (n)
+        OPTIONAL MATCH (n)-[r]-()
+        WITH n, collect(r) AS rels
+        WHERE size(rels) <= 50000
+        DETACH DELETE n, rels
+    """
+    run_query(driver, query)
 
 
 def ingest_category(driver, row_dict):
