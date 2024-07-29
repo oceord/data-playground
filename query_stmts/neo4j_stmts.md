@@ -5,16 +5,16 @@
 
 ## Basic Navigation and Retrieval
 
-- [ ] Find all products and their details.
-- [ ] Retrieve all categories and their sub-categories.
-- [ ] List all sellers along with their ratings.
-- [ ] Show all products that are currently out of stock.
-- [ ] Find products within a specific price range.
-- [ ] List all brands available in the dataset.
-- [ ] Retrieve products belonging to a specific category.
-- [ ] Show products with a discount applied.
-- [ ] Find products with a high discount percentage.
-- [ ] List all unique URLs associated with products.
+- [x] Find all products and their details.
+- [x] Retrieve all categories and their sub-categories.
+- [x] List all sellers ~~along with their ratings~~.
+- [x] Show all products that are currently out of stock.
+- [x] Find products within a specific price range.
+- [x] List all brands available in the dataset.
+- [x] Retrieve products belonging to a specific category.
+- [x] Show products with a discount applied.
+- [x] Find products with a high discount percentage.
+- [x] List all unique URLs associated with products.
 
 ## Relationships and Connectivity
 

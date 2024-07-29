@@ -56,12 +56,14 @@ def ingest_product(driver, row_dict):
             newProduct.desc = $prod_desc,
             newProduct.brand = $prod_brand,
             newProduct.price = $prod_price,
+            newProduct.url = $prod_url,
             newProduct.avg_rating = $prod_rating
     """
     prod_name = row_dict.get("title")
     prod_desc = row_dict.get("description")
     prod_pid = row_dict.get("pid")
-    prod_brand = row_dict.get("brand")
+    prod_brand = row_dict.get("brand") or None
+    prod_url = row_dict.get("url") or None
     prod_price = cast(row_dict.get("actual_price").replace(",", ""), float)
     prod_rating = cast(row_dict.get("average_rating").replace(",", ""), float)
     run_query(
@@ -71,6 +73,7 @@ def ingest_product(driver, row_dict):
         name=prod_name,
         prod_desc=prod_desc,
         prod_brand=prod_brand,
+        prod_url=prod_url,
         prod_price=prod_price,
         prod_rating=prod_rating,
     )
