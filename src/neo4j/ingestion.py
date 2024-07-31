@@ -1,4 +1,6 @@
+import ast
 import csv
+from datetime import datetime, timezone
 
 from neo4j import GraphDatabase
 
@@ -57,6 +59,8 @@ def ingest_product(driver, row_dict):
             newProduct.brand = $prod_brand,
             newProduct.price = $prod_price,
             newProduct.url = $prod_url,
+            newProduct.crawled_at = $crawled_at,
+            newProduct.images = $images,
             newProduct.avg_rating = $prod_rating
     """
     prod_name = row_dict.get("title")
@@ -64,8 +68,15 @@ def ingest_product(driver, row_dict):
     prod_pid = row_dict.get("pid")
     prod_brand = row_dict.get("brand") or None
     prod_url = row_dict.get("url") or None
+    crawled_at = (
+        datetime.strptime(row_dict.get("crawled_at"), "%m/%d/%Y, %H:%M:%S").replace(
+            tzinfo=timezone.utc,
+        )
+        or None
+    )
     prod_price = cast(row_dict.get("actual_price").replace(",", ""), float)
     prod_rating = cast(row_dict.get("average_rating").replace(",", ""), float)
+    images = ast.literal_eval(row_dict.get("images"))
     run_query(
         driver,
         create_prod_query,
@@ -74,8 +85,10 @@ def ingest_product(driver, row_dict):
         prod_desc=prod_desc,
         prod_brand=prod_brand,
         prod_url=prod_url,
+        crawled_at=crawled_at,
         prod_price=prod_price,
         prod_rating=prod_rating,
+        images=images,
     )
     # create_cat_rel_query = """
     #     MATCH

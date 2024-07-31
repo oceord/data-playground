@@ -18,16 +18,16 @@
 
 ## Relationships and Connectivity
 
-- [ ] Identify all products sold by a particular seller.
-- [ ] Find all categories under which a specific product falls.
-- [ ] Determine all products related to a certain brand.
-- [ ] Show products that belong to both a specific category and sub-category.
-- [ ] Identify all sellers who sell products in a given price range.
-- [ ] List all products that have been recently crawled (within the last 30 days).
-- [ ] Find products with multiple images.
-- [ ] Show products that have a high original price but are now discounted significantly.
-- [ ] Identify all products that are part of a specific 'breadcrumbs' path.
-- [ ] List all products that have a description containing a specific keyword.
+- [x] Identify all products sold by a particular seller.
+- [x] Find all categories under which a specific product falls.
+- [x] Determine all products related to a certain brand.
+- [x] Show products that belong to both a specific category and sub-category.
+- [x] Identify all sellers who sell products in a given price range.
+- [x] List all products that have been recently crawled (within the last 30 days).
+- [x] Find products with multiple images.
+- [x] Show products that have a high original price but are now discounted significantly.
+- [x] Identify all products that are part of a specific 'breadcrumbs' path.
+- [x] List all products that have a description containing a specific keyword.
 
 ## Aggregation and Analysis
 
