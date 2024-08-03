@@ -87,5 +87,8 @@ dcomp-up-cassandra: d-create-network ## Start cassandra service
 dcomp-up-neo4j: d-create-network ## Start neo4j service
 	@docker-compose --profile neo4j up -d
 
+dcomp-up-elasticsearch: d-create-network ## Start elasticsearch service
+	@docker-compose --profile elasticsearch up -d
+
 dcomp-down: ## Stop all services
 	@docker-compose down

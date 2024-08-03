@@ -21,7 +21,7 @@
   - [x] Data manipulation
 
 - [ ] Dynamic Product Search Implementation - Elasticsearch
-  - [ ] Docker container
+  - [x] Docker container
   - [ ] Data ingestion
   - [ ] Data manipulation
 

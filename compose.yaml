@@ -101,6 +101,34 @@ services:
     volumes:
       - neo4jdata:/data
 
+  elasticsearch:
+    profiles: [ "elasticsearch", "search" ]
+    image: elasticsearch:8.14.3
+    container_name: elasticsearch
+    ports:
+      - 9200:9200
+      - 9300:9300
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    networks:
+      - dataplaynet
+    volumes:
+      - elasticsearchdata:/usr/share/elasticsearch/data
+
+  kibana:
+    profiles: [ "elasticsearch", "search" ]
+    image: kibana:8.14.3
+    container_name: kibana
+    ports:
+      - 5601:5601
+    depends_on:
+      - elasticsearch
+    networks:
+      - dataplaynet
+    volumes:
+      - kibanadata:/usr/share/kibana/data
+
 networks:
   dataplaynet:
     external: true
@@ -110,3 +138,5 @@ volumes:
   redisdata:
   redisinsightdata:
   neo4jdata:
+  elasticsearchdata:
+  kibanadata:
