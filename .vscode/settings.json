@@ -37,6 +37,7 @@
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
     "cSpell.words": [
+        "aggs",
         "BGREWRITEAOF",
         "BGSAVE",
         "bson",
