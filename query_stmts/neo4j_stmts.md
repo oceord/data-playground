@@ -7,7 +7,7 @@
 
 - [x] Find all products and their details.
 - [x] Retrieve all categories and their sub-categories.
-- [x] List all sellers ~~along with their ratings~~.
+- [x] List all sellers ~~along with their ratings~~ (NOTE: sellers have no rating in this dataset).
 - [x] Show all products that are currently out of stock.
 - [x] Find products within a specific price range.
 - [x] List all brands available in the dataset.
@@ -31,13 +31,13 @@
 
 ## Aggregation and Analysis
 
-- [ ] Calculate the average rating of all sellers.
-- [ ] Count the number of products per category.
-- [ ] Summarize the total number of products across all brands.
-- [ ] Find the most common words used in product descriptions.
-- [ ] Calculate the average discount rate applied to products.
-- [ ] Identify the top-selling brands based on the number of products listed.
-- [ ] Determine the most popular categories based on the number of products.
-- [ ] Show the distribution of products by their current status (in stock vs. out of stock).
-- [ ] Calculate the average selling price of products in each category.
-- [ ] Identify trends in product pricing over time (using crawled_at).
+- [x] Calculate the average rating of all sellers (NOTE: calculated average product rating per seller).
+- [x] Count the number of products per category.
+- [x] Summarize the total number of products across all brands.
+- [x] ~~Find the most common words used in product descriptions~~ (NOTE: could not find a native way of doing this; a hybrid solution using python and Neo4j code, optimizing with a full-text index, could be used).
+- [x] Calculate the average discount rate applied to products.
+- [x] Identify the top-selling brands based on the number of products listed.
+- [x] Determine the most popular categories based on the number of products.
+- [x] Show the distribution of products by their current status (in stock vs. out of stock).
+- [x] Calculate the average selling price of products in each category.
+- [x] Identify trends in product pricing over time (using crawled_at).

@@ -51,6 +51,8 @@
         "etype",
         "FLUSHALL",
         "FLUSHDB",
+        "ftix",
+        "fulltext",
         "Geospatial",
         "getseeds",
         "goku",

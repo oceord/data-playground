@@ -15,10 +15,10 @@
   - [x] Data ingestion
   - [x] Data manipulation
 
-- [ ] Advanced Relationship Mapping - Neo4j
+- [x] Advanced Relationship Mapping - Neo4j
   - [x] Docker container
   - [x] Data ingestion
-  - [ ] Data manipulation
+  - [x] Data manipulation
 
 - [ ] Dynamic Product Search Implementation - Elasticsearch
   - [ ] Docker container
