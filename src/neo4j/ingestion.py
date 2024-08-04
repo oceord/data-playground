@@ -1,3 +1,5 @@
+# Dataset: https://www.kaggle.com/datasets/aaditshukla/flipkart-fasion-products-dataset
+
 import ast
 import csv
 from datetime import datetime, timezone

@@ -1,3 +1,5 @@
+# Dataset: https://www.kaggle.com/datasets/mkechinov/ecommerce-events-history-in-electronics-store
+
 from urllib.parse import quote_plus
 
 import polars as pl

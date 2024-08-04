@@ -60,6 +60,7 @@
         "HDEL",
         "HGET",
         "HGETALL",
+        "hincrby",
         "HKEYS",
         "HSET",
         "KEYSPACE",
@@ -95,6 +96,7 @@
         "ZADD",
         "ZCARD",
         "ZCOUNT",
+        "zincrby",
         "ZRANGE",
         "ZREM"
     ]
