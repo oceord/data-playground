@@ -115,7 +115,6 @@ services:
       - dataplaynet
     volumes:
       - elasticsearchdata:/usr/share/elasticsearch/data
-
   kibana:
     profiles: [ "elasticsearch", "search" ]
     image: kibana:8.14.3
