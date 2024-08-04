@@ -22,7 +22,7 @@
 
 - [ ] Dynamic Product Search Implementation - Elasticsearch
   - [x] Docker container
-  - [ ] Data ingestion
+  - [x] Data ingestion
   - [ ] Data manipulation
 
 - [ ] Personalized Similar Product Recommendations - Qdrant or Chroma
