@@ -17,7 +17,7 @@ GET /products/_search
 }
 ```
 
-1. Full-Text Search
+2. Full-Text Search
 
     - Objective: Find products by title.
     - Key Points: Introduction to full-text search capabilities.
