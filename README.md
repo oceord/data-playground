@@ -1,5 +1,3 @@
-
-
 # Data Playground
 
 Data Playground is a repository designed for exploring and experimenting with a variety of database systems, encompassing both SQL and NoSQL technologies.
