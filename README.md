@@ -1,3 +1,5 @@
+
+
 # Data Playground
 
 Data Playground is a repository designed for exploring and experimenting with a variety of database systems, encompassing both SQL and NoSQL technologies.
@@ -38,6 +40,10 @@ The primary goal is to establish the backend infrastructure and query mechanisms
   - DB: Qdrant or Chroma
   - Applicability: generate personalized recommendations for similar products based on item embeddings
   - Description: this approach enhances the personalization layer of the simulated recommendation system, tailoring product suggestions to individual user preferences
+- **Time-Series Data Analysis and Forecasting**
+  - DB: TimescaleDB
+  - Applicability: manage and analyze time-stamped data, such as user activity logs, system metrics, and inventory levels over time
+  - Description: this time-series database optimizes storage and query performance for time-oriented data
 - **Reliable Financial Operations and Inventory Tracking**
   - DB: PostgreSQL
   - Applicability: manage financial transactions and tracking inventory details
