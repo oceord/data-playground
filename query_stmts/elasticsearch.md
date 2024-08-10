@@ -63,42 +63,42 @@
   - Objective: Find sellers starting with a specific prefix.
   - Key Points: Efficient searching of text prefixes.
 
-- [ ] Exists Query
+- [x] Exists Query
   - Objective: Find products with a discount.
   - Key Points: Checking for the existence of a field.
 
-- [ ] Missing Query
+- [x] Missing Query
   - Objective: Find products without a discount.
   - Key Points: Identifying documents missing certain fields.
 
-- [ ] Date Range Query
+- [x] Date Range Query
   - Objective: Find products crawled within a specific date range.
   - Key Points: Working with dates for filtering.
 
-- [ ] Function Score Query
+- [x] Function Score Query
   - Objective: Dynamically adjust scores based on time decay.
   - Key Points: Advanced scoring mechanisms.
 
-- [ ] Top Hits
+- [x] Top Hits
   - Objective: Retrieve top hits based on sorting criteria.
   - Key Points: Extracting snippets of documents.
 
-- [ ] Query String
+- [x] Query String
   - Objective: Perform a flexible search using wildcards.
   - Key Points: Wildcard searches for flexibility.
 
-- [ ] Inverse Document Frequency (IDF)
+- [x] Inverse Document Frequency (IDF)
   - Objective: Adjust scores based on IDF for a specific category.
   - Key Points: Enhancing relevance for specific categories.
 
-- [ ] Constant Score Query
+- [x] Constant Score Query
   - Objective: Ensure a constant score for documents matching the filter.
   - Key Points: Maintaining consistent scoring for filtered results.
 
-- [ ] Range Step Query
+- [x] Range Step Query
   - Objective: Find products within a stepped range.
   - Key Points: Customized range queries for specific needs.
 
-- [ ] Composite Aggregation
+- [x] Composite Aggregation
   - Objective: Aggregate products by brand and category.
   - Key Points: Complex aggregations for deeper insights.

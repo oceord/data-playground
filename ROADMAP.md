@@ -20,10 +20,10 @@
   - [x] Data ingestion
   - [x] Data manipulation
 
-- [ ] Dynamic Product Search Implementation - Elasticsearch
+- [x] Dynamic Product Search Implementation - Elasticsearch
   - [x] Docker container
   - [x] Data ingestion
-  - [ ] Data manipulation
+  - [x] Data manipulation
 
 - [ ] Personalized Similar Product Recommendations - Qdrant or Chroma
   - [ ] Docker container
