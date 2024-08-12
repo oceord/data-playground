@@ -75,6 +75,7 @@
         "phind",
         "pymongo",
         "Qdrant",
+        "RDBMS",
         "rels",
         "resultset",
         "RPOP",
