@@ -92,6 +92,7 @@
         "subcat",
         "SUPERCOLUMN",
         "UNLOGGED",
+        "Weaviate",
         "withscores",
         "ZADD",
         "ZCARD",

@@ -25,7 +25,7 @@
   - [x] Data ingestion
   - [x] Data manipulation
 
-- [ ] Personalized Similar Product Recommendations - Qdrant or Chroma
+- [ ] Personalized Similar Product Recommendations - Weaviate
   - [ ] Docker container
   - [ ] Embedding generation
   - [ ] Data ingestion
