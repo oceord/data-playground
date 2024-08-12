@@ -90,5 +90,8 @@ dcomp-up-neo4j: d-create-network ## Start neo4j service
 dcomp-up-elasticsearch: d-create-network ## Start elasticsearch service
 	@docker-compose --profile elasticsearch up -d
 
+dcomp-up-weaviate: d-create-network ## Start weaviate service
+	@docker-compose --profile weaviate up -d
+
 dcomp-down: ## Stop all services
 	@docker-compose down

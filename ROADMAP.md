@@ -26,7 +26,7 @@
   - [x] Data manipulation
 
 - [ ] Personalized Similar Product Recommendations - Weaviate
-  - [ ] Docker container
+  - [x] Docker container
   - [ ] Embedding generation
   - [ ] Data ingestion
   - [ ] Data manipulation
