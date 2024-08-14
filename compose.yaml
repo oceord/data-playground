@@ -132,13 +132,6 @@ services:
     profiles: [ "weaviate", "similarity_search" ]
     image: cr.weaviate.io/semitechnologies/weaviate:1.26.1
     container_name: weaviate
-    command:
-      - --host
-      - 0.0.0.0
-      - --port
-      - '8080'
-      - --scheme
-      - http
     ports:
       - 8080:8080
       - 50051:50051
@@ -149,11 +142,18 @@ services:
       QUERY_DEFAULTS_LIMIT: 25
       AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
       PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
-      DEFAULT_VECTORIZER_MODULE: 'none'
-      ENABLE_MODULES: 'text2vec-cohere,text2vec-huggingface,text2vec-palm,text2vec-openai,generative-openai,generative-cohere,generative-palm,ref2vec-centroid,reranker-cohere,qna-openai'
+      ENABLE_MODULES: text2vec-transformers
+      DEFAULT_VECTORIZER_MODULE: text2vec-transformers
+      TRANSFORMERS_INFERENCE_API: http://t2v-transformers:8080
       CLUSTER_HOSTNAME: 'node1'
     volumes:
       - weaviatedata:/var/lib/weaviate
+  t2v-transformers:
+    profiles: [ "weaviate", "similarity_search" ]
+    image: cr.weaviate.io/semitechnologies/transformers-inference:snowflake-snowflake-arctic-embed-xs-onnx
+    container_name: t2v_transformers
+    networks:
+      - dataplaynet
 
 networks:
   dataplaynet:
