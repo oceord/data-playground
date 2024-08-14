@@ -9,6 +9,7 @@ redis = "*"
 cassandra-driver = "*"
 neo4j = "*"
 elasticsearch = "*"
+weaviate-client = "*"
 
 [dev-packages]
 build = "*"
