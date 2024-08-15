@@ -34,13 +34,13 @@
 - [x] ~~Text Analysis~~ (NOTE: there seems to be no direct way to do this using only Weaviate; a solution could be to use transformers on the client side and to store that data afterwards)
 - [x] ~~Custom Functions~~ (NOTE: phind hallucination)
 - [x] ~~Join Objects~~ (NOTE: phind hallucination; the only way to join two classes is to use cross references)
-- [ ] Filter by Vector Distance
-- [ ] Batch Operations
-- [ ] Data export
-- [ ] Data Import
-- [ ] Schema Management
-- [ ] Security and Permissions
-- [ ] Monitoring and Health Checks
-- [ ] Backup and Restore
-- [ ] Scaling and Performance Tuning
-- [ ] Custom Modules
+- [x] Filter by Vector Distance
+- [x] Batch Operations
+- [x] Data export
+- [x] Data Import
+- [x] Schema Management
+- [x] ~~Security and Permissions~~ (NOTE: ignored because it does not falls under this project scope)
+- [x] Monitoring and Health Checks
+- [x] Backup and Restore
+- [x] ~~Scaling and Performance Tuning~~ (NOTE: no direct way of doing this was found besides tinkering with indexes)
+- [x] Custom Modules

@@ -25,11 +25,11 @@
   - [x] Data ingestion
   - [x] Data manipulation
 
-- [ ] Personalized Similar Product Recommendations - Weaviate
+- [x] Personalized Similar Product Recommendations - Weaviate
   - [x] Docker container
-  - [ ] Embedding generation
-  - [ ] Data ingestion
-  - [ ] Data manipulation
+  - [x] Embedding generation
+  - [x] Data ingestion
+  - [x] Data manipulation
 
 - [ ] Time-Series Data Analysis and Forecasting - TimescaleDB
   - [ ] Docker container

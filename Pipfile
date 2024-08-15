@@ -11,6 +11,7 @@ neo4j = "*"
 elasticsearch = "*"
 weaviate-client = "*"
 sentence-transformers = "*"
+requests = "*"
 
 [dev-packages]
 build = "*"
