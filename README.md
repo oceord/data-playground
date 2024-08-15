@@ -35,7 +35,7 @@ The primary goal is to establish the backend infrastructure and query mechanisms
   - Applicability: dynamic search across product catalogs
   - Description: this powerful search engine provides fast and precise search results, significantly improving the discoverability of products within the system
 - **Personalized Similar Product Recommendations**
-  - DB: Weaviate
+  - DB: Weaviate (vector database)
   - Applicability: generate personalized recommendations for similar products based on item embeddings
   - Description: this approach enhances the personalization layer of the simulated recommendation system, tailoring product suggestions to individual user preferences
 - **Time-Series Data Analysis and Forecasting**
