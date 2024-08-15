@@ -4,6 +4,8 @@ Data Playground is a repository designed for exploring and experimenting with a 
 This project seeks to offer a practical space where one can delve into the intricacies of different databases, understand their unique features, assess their performance characteristics, and grasp how they manage data distinctly.
 Through this initiative, the objective is to gain insights into the strengths and limitations of each database system, facilitating informed decisions when designing and implementing similar projects in the future.
 
+A roadmap is available [here](ROADMAP.md).
+
 ## Overview
 
 ### Learning Project Idea: E-commerce Recommendation Backend
