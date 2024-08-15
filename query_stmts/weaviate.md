@@ -27,13 +27,13 @@
 - [x] Vector Similarity Search
 - [x] Classification
 - [x] Question-Answer Extraction
-- [ ] Combining Filters and Sorting
-- [ ] Pagination
-- [ ] Aggregation
-- [ ] Faceted Search
-- [ ] Text Analysis
-- [ ] Custom Functions
-- [ ] Join Objects
+- [x] Combining Filters and Sorting
+- [x] Pagination
+- [x] Aggregation
+- [x] Faceted Search
+- [x] ~~Text Analysis~~ (NOTE: there seems to be no direct way to do this using only Weaviate; a solution could be to use transformers on the client side and to store that data afterwards)
+- [x] ~~Custom Functions~~ (NOTE: phind hallucination)
+- [x] ~~Join Objects~~ (NOTE: phind hallucination; the only way to join two classes is to use cross references)
 - [ ] Filter by Vector Distance
 - [ ] Batch Operations
 - [ ] Data export
