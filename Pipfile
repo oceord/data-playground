@@ -10,6 +10,7 @@ cassandra-driver = "*"
 neo4j = "*"
 elasticsearch = "*"
 weaviate-client = "*"
+sentence-transformers = "*"
 
 [dev-packages]
 build = "*"

@@ -5,24 +5,27 @@
 
 ## Embedding Your Dataset
 
-- [ ] Option 1 - Have Weaviate create vectors for you
+- [x] Option 1 - Have Weaviate create vectors for you
   - Define a schema for the dataset and ensure the descriptions are embedded.
+  - NOTE: this was the chosen option to facilitate data manipulation
+    - The Weaviate instance from docker-compose has been set with only the `text2vec-transformers` module enabled, which allows "Weaviate to obtain vectors locally from text using a transformers-based model" ([link](https://weaviate.io/developers/weaviate/modules/retriever-vectorizer-modules/text2vec-transformers))
+    - Additionally, the chosen embedding model for `text2vec-transformers` to work with was `snowflake-arctic-embedding-xs` due to it's reported high performance ([link](https://huggingface.co/Snowflake/snowflake-arctic-embed-xs))
 
-- [ ] Option 2 - Specify custom vectors
-  - Use vectors created by the client and not by the Weaviate itself.
+- [x] ~~Option 2 - Specify custom vectors~~ (NOTE: preferred Option 1 over this one)
+  - Use vectors created by the client and not by Weaviate.
 
 ## Querying Weaviate
 
 ### Basic Queries
 
-- [ ] Find by ID
-- [ ] Search by Category
+- [x] Find by ID
+- [x] Search by Category
 
 ### Advanced Queries
 
-- [ ] Semantic Search
-- [ ] Vector Similarity Search
-- [ ] Classification
+- [x] Semantic Search
+- [x] Vector Similarity Search
+- [x] Classification
 - [ ] Question-Answer Extraction
 - [ ] Combining Filters and Sorting
 - [ ] Pagination
