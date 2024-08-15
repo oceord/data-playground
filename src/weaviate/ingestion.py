@@ -1,5 +1,4 @@
-# Datasets:
-#   https://www.kaggle.com/datasets/saurabhshahane/ecommerce-text-classification
+# Dataset: https://www.kaggle.com/datasets/saurabhshahane/ecommerce-text-classification
 
 import csv
 
