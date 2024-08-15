@@ -26,7 +26,7 @@
 - [x] Semantic Search
 - [x] Vector Similarity Search
 - [x] Classification
-- [ ] Question-Answer Extraction
+- [x] Question-Answer Extraction
 - [ ] Combining Filters and Sorting
 - [ ] Pagination
 - [ ] Aggregation

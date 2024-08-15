@@ -142,9 +142,10 @@ services:
       QUERY_DEFAULTS_LIMIT: 25
       AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
       PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
-      ENABLE_MODULES: text2vec-transformers
+      ENABLE_MODULES: 'text2vec-transformers,qna-transformers'
       DEFAULT_VECTORIZER_MODULE: text2vec-transformers
-      TRANSFORMERS_INFERENCE_API: http://t2v-transformers:8080
+      TRANSFORMERS_INFERENCE_API: http://t2v_transformers:8080
+      QNA_INFERENCE_API: "http://qna_transformers:8080"
       CLUSTER_HOSTNAME: 'node1'
     volumes:
       - weaviatedata:/var/lib/weaviate
@@ -154,6 +155,15 @@ services:
     container_name: t2v_transformers
     networks:
       - dataplaynet
+  qna-transformers:
+    profiles: [ "weaviate", "similarity_search" ]
+    image: cr.weaviate.io/semitechnologies/qna-transformers:bert-large-uncased-whole-word-masking-finetuned-squad
+    container_name: qna_transformers
+    networks:
+      - dataplaynet
+    environment:
+      ENABLE_CUDA: '0'
+      NVIDIA_VISIBLE_DEVICES: none
 
 networks:
   dataplaynet:
