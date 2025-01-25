@@ -166,6 +166,31 @@ services:
       ENABLE_CUDA: '0'
       NVIDIA_VISIBLE_DEVICES: none
 
+  timescaledb:
+    profiles: [ "timescaledb", "timeseries" ]
+    image: timescale/timescaledb:latest-pg14
+    container_name: timescale
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: timescaledb
+      POSTGRES_PASSWORD: timescaledb
+      TIMESCALEDB_TELEMETRY: 'off'
+    networks:
+      - dataplaynet
+    volumes:
+      - timescale_vol:/var/lib/postgresql/data
+  db_adminer:
+    profiles: [ "timescaledb", "timeseries" ]
+    container_name: db_adminer
+    image: adminer
+    ports:
+      - 8080:8080
+    networks:
+      - dataplaynet
+    restart: always
+
 networks:
   dataplaynet:
     external: true
@@ -178,3 +203,4 @@ volumes:
   elasticsearchdata:
   kibanadata:
   weaviatedata:
+  timescale_vol:

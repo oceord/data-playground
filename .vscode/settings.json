@@ -37,6 +37,7 @@
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
     "cSpell.words": [
+        "adminer",
         "Agarwal",
         "aggs",
         "Anurag",
@@ -49,6 +50,7 @@
         "datacenter",
         "dataplaynet",
         "DBSIZE",
+        "dcomp",
         "DECR",
         "discoverability",
         "dsphere",
@@ -78,6 +80,7 @@
         "openai",
         "otracker",
         "phind",
+        "pipfile",
         "pymongo",
         "Qdrant",
         "RDBMS",
@@ -97,6 +100,7 @@
         "sstables",
         "subcat",
         "SUPERCOLUMN",
+        "timescaledb",
         "UNLOGGED",
         "usecols",
         "vectorize",

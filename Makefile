@@ -93,5 +93,8 @@ dcomp-up-elasticsearch: d-create-network ## Start elasticsearch service
 dcomp-up-weaviate: d-create-network ## Start weaviate service
 	@docker-compose --profile weaviate up -d
 
+dcomp-up-timescaledb: d-create-network ## Start timescaledb service
+	@docker-compose --profile timescaledb up -d
+
 dcomp-down: ## Stop all services
 	@docker-compose down

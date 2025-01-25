@@ -10,7 +10,9 @@ SYS_COMMON_PACKAGES=(
 PIP_BUILD_PACKAGES=(
     build
 )
-SYS_DEV_PACKAGES=()
+SYS_DEV_PACKAGES=(
+    libpq-dev
+)
 PIP_DEV_PACKAGES=(
     pipenv
 )

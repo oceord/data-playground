@@ -12,6 +12,7 @@ elasticsearch = "*"
 weaviate-client = "*"
 sentence-transformers = "*"
 requests = "*"
+psycopg2 = "*"
 
 [dev-packages]
 build = "*"

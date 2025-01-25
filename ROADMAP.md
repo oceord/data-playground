@@ -32,7 +32,7 @@
   - [x] Data manipulation
 
 - [ ] Time-Series Data Analysis and Forecasting - TimescaleDB
-  - [ ] Docker container
+  - [x] Docker container
   - [ ] Data ingestion
   - [ ] Data manipulation
 
