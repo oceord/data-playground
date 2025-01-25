@@ -6,7 +6,7 @@
     "files.trimTrailingWhitespace": true,
     "notebook.formatOnSave.enabled": true,
     /* Features **/
-    "explorer.excludeGitIgnore": true,
+    "explorer.excludeGitIgnore": false,
     "notebook.diff.ignoreMetadata": true,
     "notebook.diff.ignoreOutputs": true,
     "notebook.diff.overviewRuler": true,
@@ -101,6 +101,7 @@
         "subcat",
         "SUPERCOLUMN",
         "timescaledb",
+        "TIMESTAMPTZ",
         "UNLOGGED",
         "usecols",
         "vectorize",

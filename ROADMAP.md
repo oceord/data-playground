@@ -33,7 +33,7 @@
 
 - [ ] Time-Series Data Analysis and Forecasting - TimescaleDB
   - [x] Docker container
-  - [ ] Data ingestion
+  - [x] Data ingestion
   - [ ] Data manipulation
 
 - [ ] Reliable Financial Operations and Inventory Tracking - PostgreSQL
