@@ -99,4 +99,5 @@ if __name__ == "__main__":
     import sys
 
     input_csvs = [Path(p) for p in sys.argv[1:]]
+    reset_db_structures()
     ingest_data_files(input_csvs)
