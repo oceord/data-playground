@@ -5,11 +5,11 @@
 
 ## Setup
 
-- [ ] Create a hypertable from the existing `events` table to enable time-series optimizations.
-- [ ] Add a retention policy to automatically drop data older than 1 year from the `events` hypertable.
-- [ ] Configure compression on the `events` hypertable to reduce storage usage.
-- [ ] Set up a continuous aggregate to precompute daily event counts.
-- [ ] Create a new hypertable with custom chunk intervals for better performance.
+- [x] Create a hypertable from the existing `events` table to enable time-series optimizations.
+- [x] Add a retention policy to automatically drop data older than 1 year from the `events` hypertable.
+- [x] Configure compression on the `events` hypertable to reduce storage usage.
+- [x] Set up a continuous aggregate to precompute daily event counts.
+- [x] Create a new hypertable with custom chunk intervals for better performance.
 
 ## Performance
 

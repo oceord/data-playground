@@ -13,39 +13,46 @@ USER = "timescaledb"
 PASSWORD = "timescaledb"
 
 DBNAME = "db_user_events"
-SCHEMA = "public"
-TABLENAME = "events"
+TABLENAME = "t_user_events"
 
 SEP = ","
 
 
-def drop_create_database():
+def reset_db_structures():
+    drop_create_db()
+    create_table()
+
+
+def drop_create_db():
     conn = psycopg2.connect(host=HOST, user=USER, password=PASSWORD)
     conn.autocommit = True
     cur = conn.cursor()
     try:
-        print(f"Dropping '{DBNAME}'")
+        print(f"Dropping db '{DBNAME}'")
         drop_db_query = sql.SQL("DROP DATABASE IF EXISTS {}").format(
             sql.Identifier(DBNAME),
         )
         cur.execute(drop_db_query)
-        print(f"Creating '{DBNAME}'")
+        print(f"Creating db '{DBNAME}'")
         create_db_query = sql.SQL("CREATE DATABASE {}").format(sql.Identifier(DBNAME))
         cur.execute(create_db_query)
+    except Exception:
+        cur.close()
+        conn.close()
+        raise
     finally:
         cur.close()
         conn.close()
 
 
-def ingest_data(file):
-    print(f"Ingesting {file}")
+def create_table():
     with psycopg2.connect(
         host=HOST,
         user=USER,
         password=PASSWORD,
         database=DBNAME,
     ) as conn, conn.cursor() as cur:
-        print(f"Creating table {SCHEMA}.{TABLENAME} if not exists")
+        print(f"Creating table '{TABLENAME}'")
         create_table_query = sql.SQL(
             """
             CREATE TABLE IF NOT EXISTS {} (
@@ -60,24 +67,36 @@ def ingest_data(file):
                 user_session VARCHAR(100)
             );
         """,
-        ).format(sql.Identifier(SCHEMA, TABLENAME))
+        ).format(sql.Identifier(TABLENAME))
         cur.execute(create_table_query)
-        print(f"Copying data from {file} to {SCHEMA}.{TABLENAME}")
+
+
+def ingest_data_file(file):
+    with psycopg2.connect(
+        host=HOST,
+        user=USER,
+        password=PASSWORD,
+        database=DBNAME,
+    ) as conn, conn.cursor() as cur:
+        print(f"Copying data from {file} to table '{TABLENAME}'")
         with file.open("r") as f:
             next(f)  # skip header
             cur.copy_from(f, TABLENAME, SEP)
         query = sql.SQL("SELECT count(1) FROM {}").format(
-            sql.Identifier(SCHEMA, TABLENAME),
+            sql.Identifier(TABLENAME),
         )
         cur.execute(query)
-        res = cur.fetchall()
-        print(*res, sep="\n")
+        res = cur.fetchone()[0]
+        print(f"Copied {res:_} items into '{TABLENAME}'")
+
+
+def ingest_data_files(input_csvs):
+    for input_csv in input_csvs:
+        ingest_data_file(input_csv)
 
 
 if __name__ == "__main__":
     import sys
 
     input_csvs = [Path(p) for p in sys.argv[1:]]
-    drop_create_database()
-    for input_csv in input_csvs:
-        ingest_data(input_csv)
+    ingest_data_files(input_csvs)

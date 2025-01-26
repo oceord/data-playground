@@ -56,7 +56,6 @@
                 "ms-python.mypy-type-checker",
                 "ms-python.python",
                 "ms-python.vscode-pylance",
-                "ms-toolsai.datawrangler",
                 "ms-toolsai.jupyter",
                 "njpwerner.autodocstring",
                 "streetsidesoftware.code-spell-checker",
