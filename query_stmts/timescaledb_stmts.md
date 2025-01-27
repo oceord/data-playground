@@ -13,11 +13,11 @@
 
 ## Performance
 
-- [ ] Enable compression on the `events` hypertable for data older than 30 days.
-- [ ] View the chunk information for the `events` hypertable to understand data partitioning.
-- [ ] Adjust the chunk interval for the `events` hypertable to optimize query performance.
-- [ ] Analyze the query plan for a time-range query on the `events` hypertable.
-- [ ] Drop chunks older than 6 months from the `events` hypertable to free up space.
+- [x] Enable compression on the `events` hypertable for data older than 30 days.
+- [x] View the chunk information for the `events` hypertable to understand data partitioning.
+- [x] Adjust the chunk interval for the `events` hypertable to optimize query performance.
+- [x] Analyze the query plan for a time-range query on the `events` hypertable.
+- [x] Drop chunks older than 6 months from the `events` hypertable to free up space.
 
 ## Time-series Handling
 

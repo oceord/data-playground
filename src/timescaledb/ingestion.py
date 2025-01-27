@@ -87,7 +87,7 @@ def ingest_data_file(file):
         )
         cur.execute(query)
         res = cur.fetchone()[0]
-        print(f"Copied {res:_} items into '{TABLENAME}'")
+        print(f"Count of '{TABLENAME}': {res:_}")
 
 
 def ingest_data_files(input_csvs):
