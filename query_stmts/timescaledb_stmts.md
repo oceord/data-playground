@@ -21,11 +21,11 @@
 
 ## Time-series Handling
 
-- [ ] Insert a new event into the `events` hypertable.
-- [ ] Retrieve all events for a specific user within the last 7 days.
-- [ ] Calculate the total number of events per day for the last month.
-- [ ] Find the average price of products sold per brand in the last 30 days.
-- [ ] Identify the top 5 most active users by event count in the last week.
+- [x] Insert a new event into the `events` hypertable.
+- [x] Retrieve all events for a specific user within the last 7 days.
+- [x] Calculate the total number of events per day for the last month.
+- [x] Find the average price of products sold per brand in the last 30 days.
+- [x] Identify the top 5 most active users by event count in the last week.
 
 ## CRUD Operations
 
