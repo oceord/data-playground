@@ -53,16 +53,16 @@
 
 ## Advanced Topics
 
-- [ ] Create a continuous aggregate to calculate the hourly average price of products.
-- [ ] Refresh a continuous aggregate to include the latest data.
-- [ ] Downsample the `events` hypertable to store only daily summaries.
-- [ ] Set up a data retention policy for a continuous aggregate.
-- [ ] Use a window function to calculate a rolling average of event counts over 7 days.
-- [ ] Create a materialized view to store precomputed event statistics.
-- [ ] Use `time_bucket` to group events into 15-minute intervals for analysis.
-- [ ] Apply a retention policy to a continuous aggregate to automatically drop old data.
-- [ ] Use `JOIN` to combine `events` data with another table for enriched analysis.
-- [ ] Create a custom function to calculate the total revenue per day from the `events` table.
+- [x] Create a continuous aggregate to calculate the hourly average price of products.
+- [x] Refresh a continuous aggregate to include the latest data.
+- [x] ~~Downsample the `events` hypertable to store only daily summaries.~~ (NOTE: DeepSeek hallucination; we cannot change chunk buckets, only new ones)
+- [x] Set up a data retention policy for a continuous aggregate.
+- [x] Use a window function to calculate a rolling average of event counts over 7 days.
+- [x] Create a materialized view to store precomputed event statistics.
+- [x] Use `time_bucket` to group events into 15-minute intervals for analysis.
+- [x] Apply a retention policy to a continuous aggregate to automatically drop old data.
+- [x] Use `JOIN` to combine `events` data with another table for enriched analysis.
+- [x] Create a custom function to calculate the total revenue per day from the `events` table.
 
 ## Additional Advanced Features
 
