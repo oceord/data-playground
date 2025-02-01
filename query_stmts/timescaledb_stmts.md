@@ -37,11 +37,11 @@
 
 ## Indexing
 
-- [ ] Create a B-tree index on the `user_id` column to speed up user-specific queries.
-- [ ] Create a composite index on `event_time` and `event_type` for faster time-based filtering.
-- [ ] Drop an existing index on the `brand` column if it is no longer needed.
-- [ ] Create a hash index on the `user_session` column for faster equality searches.
-- [ ] Analyze the performance impact of an index on a time-range query.
+- [x] Create a B-tree index on the `user_id` column to speed up user-specific queries.
+- [x] Create a composite index on `event_time` and `event_type` for faster time-based filtering.
+- [x] Drop an existing index on the `brand` column if it is no longer needed.
+- [x] Create a hash index on the `user_session` column for faster equality searches.
+- [x] Analyze the performance impact of an index on a time-range query.
 
 ## Partitioning
 
