@@ -29,11 +29,11 @@
 
 ## CRUD Operations
 
-- [ ] Update the `event_type` for all events with a specific `user_id`.
-- [ ] Delete all events older than 2 years from the `events` hypertable.
-- [ ] Retrieve all events of a specific `event_type` within a time range.
-- [ ] Insert multiple events into the `events` hypertable in a single query.
-- [ ] Update the `price` field for events with a specific `product_id`.
+- [x] Update the `event_type` for all events with a specific `user_id`.
+- [x] Delete all events older than 2 years from the `events` hypertable.
+- [x] Retrieve all events of a specific `event_type` within a time range.
+- [x] Insert multiple events into the `events` hypertable in a single query.
+- [x] Update the `price` field for events with a specific `product_id`.
 
 ## Indexing
 
