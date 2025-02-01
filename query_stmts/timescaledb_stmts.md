@@ -45,11 +45,11 @@
 
 ## Partitioning
 
-- [ ] View the current chunking strategy for the `events` hypertable.
-- [ ] Merge two chunks in the `events` hypertable to optimize storage.
-- [ ] Split a chunk in the `events` hypertable to improve query performance.
-- [ ] Add a new partition to the `events` hypertable for future data.
-- [ ] Disable partitioning on the `events` hypertable temporarily for maintenance.
+- [x] View the current chunking strategy for the `events` hypertable.
+- [x] ~~Merge two chunks in the `events` hypertable to optimize storage.~~ (NOTE: DeepSeek hallucination)
+- [x] ~~Split a chunk in the `events` hypertable to improve query performance.~~ (NOTE: DeepSeek hallucination; to do this we would need to (1) identify the chunk to split, (2) adjust the chunk interval, and (3) redistribute existing data)
+- [x] Add a new partition to the `events` hypertable for future data.
+- [x] ~~Disable partitioning on the `events` hypertable temporarily for maintenance.~~ (NOTE: DeepSeek hallucination)
 
 ## Advanced Topics
 
