@@ -168,7 +168,7 @@ services:
 
   timescaledb:
     profiles: [ "timescaledb", "timeseries" ]
-    image: timescale/timescaledb:latest-pg14
+    image: timescale/timescaledb-ha:pg17
     container_name: timescale
     restart: always
     ports:

@@ -19,6 +19,9 @@ build = "*"
 ipykernel = "*"
 pandas = "*"
 polars = "*"
+matplotlib = "*"
+seaborn = "*"
+sqlalchemy = "*"
 
 [requires]
 python_version = "3.12"

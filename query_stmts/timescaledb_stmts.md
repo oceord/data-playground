@@ -55,7 +55,7 @@
 
 - [x] Create a continuous aggregate to calculate the hourly average price of products.
 - [x] Refresh a continuous aggregate to include the latest data.
-- [x] ~~Downsample the `events` hypertable to store only daily summaries.~~ (NOTE: DeepSeek hallucination; we cannot change chunk buckets, only new ones)
+- [x] ~~Downsample the `events` hypertable to store only daily summaries.~~ (NOTE: DeepSeek hallucination; we cannot change chunk buckets, only new ones; we can however downsample metrics using the toolkit extensions)
 - [x] Set up a data retention policy for a continuous aggregate.
 - [x] Use a window function to calculate a rolling average of event counts over 7 days.
 - [x] Create a materialized view to store precomputed event statistics.
@@ -66,13 +66,13 @@
 
 ## Additional Advanced Features
 
-- [ ] Use `gap filling` to handle missing data in time-series queries.
-- [ ] Apply `last` and `first` functions to retrieve the most recent and oldest values in a time range.
-- [ ] Use `histogram` to analyze the distribution of event prices.
-- [ ] Set up a policy to automatically reorder chunks for better performance.
-- [ ] Use `approximate_row_count` to estimate the number of rows in a hypertable.
-- [ ] Create a custom trigger to log changes to the `events` table.
-- [ ] Use `time_bucket_gapfill` to handle missing data in time-series visualizations.
-- [ ] Apply `percentile_cont` to calculate the 90th percentile of event prices.
-- [ ] Use `hyperfunctions` to calculate the time-weighted average of event prices.
-- [ ] Set up a policy to automatically compress chunks after a specific interval.
+- [x] Use `gap filling` to handle missing data in time-series queries.
+- [x] Apply `last` and `first` functions to retrieve the most recent and oldest values in a time range.
+- [x] Use `histogram` to analyze the distribution of event prices.
+- [x] Set up a policy to automatically reorder chunks for better performance.
+- [x] Use `approximate_row_count` to estimate the number of rows in a hypertable.
+- [x] Create a custom trigger to log changes to the `events` table.
+- [x] Use `time_bucket_gapfill` to handle missing data in time-series visualizations.
+- [x] Apply `percentile_cont` to calculate the 90th percentile of event prices.
+- [x] Use `hyperfunctions` to calculate the time-weighted average of event prices.
+- [x] Set up a policy to automatically compress chunks after a specific interval.
