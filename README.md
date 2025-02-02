@@ -44,10 +44,6 @@ The primary goal is to establish the backend infrastructure and query mechanisms
   - DB: TimescaleDB (time-series SQL database)
   - Applicability: manage and analyze time-stamped data, such as user activity logs, system metrics, and inventory levels over time
   - Description: this time-series database optimizes storage and query performance for time-oriented data
-- **Reliable Financial Operations and Inventory Tracking**
-  - DB: PostgreSQL (RDBMS)
-  - Applicability: manage financial transactions and tracking inventory details
-  - Description: this relational database ensures data integrity and reliability, crucial for maintaining accuracy in critical business operations
 
 #### Datasets
 

@@ -35,8 +35,3 @@
   - [x] Docker container
   - [x] Data ingestion
   - [x] Data manipulation
-
-- [ ] Reliable Financial Operations and Inventory Tracking - PostgreSQL
-  - [ ] Docker container
-  - [ ] Data ingestion
-  - [ ] Data manipulation
